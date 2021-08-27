@@ -14,13 +14,9 @@
 */
 // add whatever parameters you deem necessary
 function twoArrayObject(keys, values) {
-    let paired={};
-    for (let i=0; i<keys.length; i++){
-        if (values[i]===undefined){
-            paired[keys[i]]= null;
-        } else {
-            paired[keys[i]]= values[i];
-        }
+    let pairs = {};
+    for (let i = 0; i < keys.length; i++) {
+        (values[i] === undefined) ? pairs[keys[i]] = null : pairs[keys[i]] = values[i];
     }
-    return paired;
+    return pairs;
 }

@@ -1,5 +1,6 @@
 "use strict";
-/** Takes inputs of 1 sorted array of integers & 1 target average and evaluates whether there are 2 integers in the array that average to the target average.
+/** Takes inputs of 1 sorted array of integers & 1 target average and evaluates 
+ * whether there are 2 integers in the array that average to the target average.
  * Use 2 pointers to compare against average
  * 1) Make left (first array element) & right (last array element) pointer
  * 2) Calculate average of 2 pointers (their value) & compare against the target average while right pointer > left pointer
@@ -11,15 +12,16 @@
 // add whatever parameters you deem necessary
 function averagePair(integers, targetAvg) {
     let left = 0;
-    let right = integers.length-1;
+    let right = integers.length - 1;
     while (left < right) {
-        if (((integers[left] + integers[right]) / 2) === targetAvg) {
+        const avg = (integers[left] + integers[right]) / 2;
+        if (avg === targetAvg) {
             return true;
         }
-        if (((integers[left] + integers[right]) / 2) < targetAvg) {
+        if (avg < targetAvg) {
             left++;
         }
-        if (((integers[left] + integers[right]) / 2) > targetAvg) {
+        if (avg > targetAvg) {
             right--;
         }
     }

@@ -16,8 +16,8 @@ function canConstructWord(word, letters) {
     if (letters.length < word.length) {
         return false;
     }
-    let wordObj = makeFrequencyCounter(word);
-    let lettersObj = makeFrequencyCounter(letters);
+    const wordObj = makeFrequencyCounter(word);
+    const lettersObj = makeFrequencyCounter(letters);
     for (let char in wordObj) {
         if (lettersObj[char] === undefined || lettersObj[char] < wordObj[char]) {
             return false;
