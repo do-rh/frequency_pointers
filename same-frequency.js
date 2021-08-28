@@ -22,10 +22,8 @@ function sameFrequency(num1, num2) {
         return false;
     }
     for (let key of num1Map.keys()) {
-        if (!(num2Map.has(key))) {
-            return false;
-        }
-        if (num2Map.get(key) != num1Map.get(key)) {
+        let isSameVal = (num2Map.get(key) === num1Map.get(key));
+        if (!(num2Map.has(key)) || !isSameVal) {
             return false;
         }
     }
