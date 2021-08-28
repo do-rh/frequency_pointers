@@ -18,7 +18,7 @@ function separatePositive(integers) {
     let left = 0;
     let right = integers.length - 1;
     while (left < right) {
-        if (integers[left] < 0) {
+        if (integers[left] > 0) {
             left++;
         } else {
             integers.push(integers[left]);
