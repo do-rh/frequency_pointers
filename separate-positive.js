@@ -7,10 +7,10 @@
  */
 
 /**
- * Use pointer starting from 0
- * While the pointer is less than the array length
- *   - If value is negative, keep in place, increment pointer to right
- *   - If value is positive, splice value and push onto end of array.
+ * Use pointers for left & right
+ * While the left pointer is less than the right pointer
+ *   - If value is negative, increment the left pointer.
+ *   - If value is positive, splice value and push onto end of array. Decrement right pointer
  * return array
  */
 // add whatever parameters you deem necessary
